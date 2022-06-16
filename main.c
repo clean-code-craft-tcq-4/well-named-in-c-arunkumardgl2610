@@ -39,8 +39,8 @@ int main() {
         for(int j=BLUE;j<=SLATE;j++)
         {
             count++;
-            testNumbertoPair(count,i,j);
-            testPairtoNumber(i,j,count);
+            testNumberToPair(count,i,j);
+            testPairToNumber(i,j,count);
         }
     }
     return 0;
