@@ -38,7 +38,7 @@ int main() {
     {
         for(int j=BLUE;j<=SLATE;j++)
         {
-            cnt++;
+            count++;
             testNumbertoPair(count,i,j);
             testPairtoNumber(i,j,count);
         }
