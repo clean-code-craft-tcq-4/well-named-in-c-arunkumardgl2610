@@ -33,11 +33,15 @@ void testPairToNumber(
 }
 
 int main() {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
-
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
-
+    int count = 0;
+    for(int i=WHITE;i<=VIOLET;i++)
+    {
+        for(int j=BLUE;j<=SLATE;j++)
+        {
+            cnt++;
+            testNumbertoPair(count,i,j);
+            testPairtoNumber(i,j,count);
+        }
+    }
     return 0;
 }
