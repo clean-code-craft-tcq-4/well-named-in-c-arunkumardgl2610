@@ -3,6 +3,7 @@
 #include "initialize.h"
 
 void ColorPairToString(const ColorPair* colorPair, char * buffer) {
+    printf("%s %s\n",MajorColorNames[colorPair->majorColor],MinorColorNames[colorPair->minorColor]);
     sprintf(buffer, "%s %s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
