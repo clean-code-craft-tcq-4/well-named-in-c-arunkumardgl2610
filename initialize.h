@@ -9,11 +9,9 @@ const char* MinorColorNames[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
 
-int numberOfMajorColors =
-    sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 
-int numberOfMinorColors =
-    sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
 const int MAX_COLORPAIR_NAME_CHARS = 16;
 
@@ -37,4 +35,7 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
         (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
     return colorPair;
 }
-
+int GetPairNumberFromColor(const ColorPair* colorPair) {
+    return colorPair->majorColor * numberOfMinorColors +
+            colorPair->minorColor + 1;
+}
